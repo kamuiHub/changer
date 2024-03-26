@@ -2,6 +2,8 @@
 const sunIcon = document.querySelector(".sun");
 const moonIcon = document.querySelector(".moon");
 
+const wait = 150;
+
 //Theme Vars
 const userTheme = localStorage.getItem("theme");
 const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -49,9 +51,9 @@ sunIcon.addEventListener("click", () => {
     setTimeout(() => {
         moonIcon.classList.remove('animate-init')
     },
-        300);
+        wait);
 
-  }, 300);
+  }, wait);
 });
 
 moonIcon.addEventListener("click", () => {
@@ -64,9 +66,9 @@ moonIcon.addEventListener("click", () => {
     setTimeout(() => {
         sunIcon.classList.remove('animate-init')
     },
-        300);
+        wait);
 
-  }, 300);
+  }, wait);
 
 });
 

@@ -9,13 +9,13 @@ module.exports = {
             transform: 'translateY(0)',
           },
           to: {
-            transform: 'translateY(+100%)',
+            transform: 'translateY(+50%)',
             opacity: '0'
           }
         },
         init: {
           from: {
-            transform: 'translateY(-100%)',
+            transform: 'translateY(-50%)',
             opacity: '0'
             
           },
@@ -26,8 +26,8 @@ module.exports = {
         }
       },
       animation: {
-        close: 'close 0.3s ease-in-out infinite',
-        init: 'init 0.3s ease-in-out infinite'
+        close: 'close 0.2s ease-in-out infinite',
+        init: 'init 0.2s ease-in-out infinite'
       }
     },
   },

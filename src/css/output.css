@@ -594,18 +594,18 @@ video {
   }
 
   to {
-    transform: translateY(+100%);
+    transform: translateY(+50%);
     opacity: 0;
   }
 }
 
 .animate-close {
-  animation: close 0.3s ease-in-out infinite;
+  animation: close 0.2s ease-in-out infinite;
 }
 
 @keyframes init {
   from {
-    transform: translateY(-100%);
+    transform: translateY(-50%);
     opacity: 0;
   }
 
@@ -616,7 +616,7 @@ video {
 }
 
 .animate-init {
-  animation: init 0.3s ease-in-out infinite;
+  animation: init 0.2s ease-in-out infinite;
 }
 
 .cursor-pointer {
