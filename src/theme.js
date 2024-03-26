@@ -2,7 +2,7 @@
 const sunIcon = document.querySelector(".sun");
 const moonIcon = document.querySelector(".moon");
 
-const wait = 150;
+const wait = 200;
 
 //Theme Vars
 const userTheme = localStorage.getItem("theme");
@@ -42,34 +42,45 @@ const themeSwitch = () => {
 
 // call theme switch on clicking buttons
 sunIcon.addEventListener("click", () => {
-     sunIcon.classList.add('animate-close');
+    moonIcon.setAttribute("src", "./img/moon-white.png");
+    sunIcon.setAttribute("src", "./img/sun-white.png")
+    setTimeout(() => {
+        sunIcon.classList.add('animate-close');
+    },30);
 
     setTimeout(() => {
-    themeSwitch();
-    sunIcon.classList.remove('animate-close');
-    moonIcon.classList.add('animate-init');
-    setTimeout(() => {
-        moonIcon.classList.remove('animate-init')
-    },
-        wait);
+        themeSwitch();
+        sunIcon.classList.remove('animate-close');
+        moonIcon.classList.add('animate-init');
+        setTimeout(() => {
+            moonIcon.classList.remove('animate-init')
+        },
+            wait);
 
-  }, wait);
+    }, wait);
 });
 
+
+const moon2 = 
+
+
 moonIcon.addEventListener("click", () => {
-   moonIcon.classList.add('animate-close');
+    sunIcon.setAttribute("src", "./img/sun-black.png")
+    moonIcon.setAttribute("src", "./img/moon-black.png");
+    setTimeout(() => {
+        moonIcon.classList.add('animate-close');
+    },30);
 
     setTimeout(() => {
-    themeSwitch();
-    moonIcon.classList.remove('animate-close');
-    sunIcon.classList.add('animate-init');
-    setTimeout(() => {
-        sunIcon.classList.remove('animate-init')
-    },
-        wait);
+        themeSwitch();
+        moonIcon.classList.remove('animate-close');
+        sunIcon.classList.add('animate-init');
+        setTimeout(() => {
+            sunIcon.classList.remove('animate-init')
+        },
+            wait);
 
-  }, wait);
-
+    }, wait);
 });
 
 //invoke theme check on initial load

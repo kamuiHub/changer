@@ -26,8 +26,8 @@ module.exports = {
         }
       },
       animation: {
-        close: 'close 0.2s ease-in-out infinite',
-        init: 'init 0.2s ease-in-out infinite'
+        close: 'close 0.25s ease-in-out infinite',
+        init: 'init 0.25s ease-in-out infinite'
       }
     },
   },
