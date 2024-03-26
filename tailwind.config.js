@@ -9,23 +9,25 @@ module.exports = {
             transform: 'translateY(0)',
           },
           to: {
-            transform: 'translateY(+40%)',
+            transform: 'translateY(+100%)',
             opacity: '0'
           }
         },
-        initial: {
+        init: {
           from: {
-            transform: 'translateY(-40%)',
+            transform: 'translateY(-100%)',
             opacity: '0'
+            
           },
           to: {
             transform: 'translateY(0)',
+            opacity: '1'
           }
         }
       },
       animation: {
-        close: 'close 0.2s ease-in-out infinite',
-        initial: 'initial 0.2s ease-in-out infinite'
+        close: 'close 0.3s ease-in-out infinite',
+        init: 'init 0.3s ease-in-out infinite'
       }
     },
   },

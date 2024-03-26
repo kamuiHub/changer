@@ -45,28 +45,28 @@ sunIcon.addEventListener("click", () => {
     setTimeout(() => {
     themeSwitch();
     sunIcon.classList.remove('animate-close');
-    moonIcon.classList.add('animate-initial');
+    moonIcon.classList.add('animate-init');
     setTimeout(() => {
-        moonIcon.classList.remove('animate-initial')
+        moonIcon.classList.remove('animate-init')
     },
-        200);
+        300);
 
-  }, 200);
+  }, 300);
 });
 
 moonIcon.addEventListener("click", () => {
-    moonIcon.classList.add('animate-close');
+   moonIcon.classList.add('animate-close');
 
     setTimeout(() => {
     themeSwitch();
     moonIcon.classList.remove('animate-close');
-    sunIcon.classList.add('animate-initial');
+    sunIcon.classList.add('animate-init');
     setTimeout(() => {
-        sunIcon.classList.remove('animate-initial')
+        sunIcon.classList.remove('animate-init')
     },
-        200);
+        300);
 
-  }, 200);
+  }, 300);
 
 });
 
