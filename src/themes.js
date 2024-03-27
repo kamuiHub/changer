@@ -5,6 +5,9 @@ const moonIcon = document.querySelector(".moon");
 const riceWhite = document.querySelector(".rice-w");
 const riceBlack = document.querySelector(".rice-b");
 
+const menuWhite = document.querySelector(".menu-w");
+const menuBlack = document.querySelector(".menu-b");
+
 const wait = 200;
 
 //Theme Vars
@@ -17,6 +20,8 @@ const iconToggle = () => {
     sunIcon.classList.toggle("display-none");
     riceWhite.classList.toggle("display-none");
     riceBlack.classList.toggle("display-none");
+    menuWhite.classList.toggle("display-none");
+    menuBlack.classList.toggle("display-none");
 };
 
 
@@ -38,9 +43,11 @@ const initDefaultTheme = () => {
         document.documentElement.classList.add("dark");
         moonIcon.classList.toggle("display-none");
         riceWhite.classList.toggle("display-none");
+        menuWhite.classList.toggle("display-none")
     } else {
          sunIcon.classList.toggle("display-none");
          riceBlack.classList.toggle("display-none");
+         menuBlack.classList.toggle("display-none");
     }
 }
 
