@@ -20,17 +20,29 @@ const iconToggle = () => {
 };
 
 
-//Initial Theme Check
-const themeCheck = () => {
-    if (userTheme === "dark" || (!userTheme && systemTheme)) {
+// //Initial Theme Check
+// const themeCheck = () => {
+//     if (userTheme === "dark" || (!userTheme && systemTheme)) {
+//         document.documentElement.classList.add("dark");
+//         moonIcon.classList.add("display-none");
+//         riceBlack.classList.add("display-none");
+//         return;
+//     }
+//     sunIcon.classList.add("display-none");
+//     riceWhite.classList.add("display-none");
+// };
+
+
+const initDefaultTheme = () => {
+    if (userTheme === "dark") {
         document.documentElement.classList.add("dark");
-        moonIcon.classList.add("display-none");
-        riceBlack.classList.add("display-none");
-        return;
+        moonIcon.classList.toggle("display-none");
+        riceWhite.classList.toggle("display-none");
+    } else {
+         sunIcon.classList.toggle("display-none");
+         riceBlack.classList.toggle("display-none");
     }
-    sunIcon.classList.add("display-none");
-    riceWhite.classList.add("display-none");
-};
+}
 
 
 //Manual Theme Switch
@@ -84,4 +96,5 @@ moonIcon.addEventListener("click", () => {
 });
 
 //invoke theme check on initial load
-themeCheck();
+//themeCheck();
+initDefaultTheme();
