@@ -2,6 +2,9 @@
 const sunIcon = document.querySelector(".sun");
 const moonIcon = document.querySelector(".moon");
 
+const riceWhite = document.querySelector(".rice-w");
+const riceBlack = document.querySelector(".rice-b");
+
 const wait = 200;
 
 //Theme Vars
@@ -12,6 +15,8 @@ const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
 const iconToggle = () => {
     moonIcon.classList.toggle("display-none");
     sunIcon.classList.toggle("display-none");
+    riceWhite.classList.toggle("display-none");
+    riceBlack.classList.toggle("display-none");
 };
 
 
@@ -20,9 +25,11 @@ const themeCheck = () => {
     if (userTheme === "dark" || (!userTheme && systemTheme)) {
         document.documentElement.classList.add("dark");
         moonIcon.classList.add("display-none");
+        riceBlack.classList.add("display-none");
         return;
     }
     sunIcon.classList.add("display-none");
+    riceWhite.classList.add("display-none");
 };
 
 
@@ -42,12 +49,9 @@ const themeSwitch = () => {
 
 // call theme switch on clicking buttons
 sunIcon.addEventListener("click", () => {
-    moonIcon.setAttribute("src", "./img/moon-white.png");
     sunIcon.setAttribute("src", "./img/sun-white.png")
-    setTimeout(() => {
-        sunIcon.classList.add('animate-close');
-    },30);
 
+    sunIcon.classList.add('animate-close');
     setTimeout(() => {
         themeSwitch();
         sunIcon.classList.remove('animate-close');
@@ -56,21 +60,16 @@ sunIcon.addEventListener("click", () => {
             moonIcon.classList.remove('animate-init')
         },
             wait);
+        sunIcon.setAttribute("src", "./img/sun-black.png")
 
     }, wait);
 });
 
 
-const moon2 = 
-
-
 moonIcon.addEventListener("click", () => {
-    sunIcon.setAttribute("src", "./img/sun-black.png")
     moonIcon.setAttribute("src", "./img/moon-black.png");
-    setTimeout(() => {
-        moonIcon.classList.add('animate-close');
-    },30);
 
+    moonIcon.classList.add('animate-close');
     setTimeout(() => {
         themeSwitch();
         moonIcon.classList.remove('animate-close');
@@ -79,6 +78,7 @@ moonIcon.addEventListener("click", () => {
             sunIcon.classList.remove('animate-init')
         },
             wait);
+        moonIcon.setAttribute("src", "./img/moon-white.png");
 
     }, wait);
 });

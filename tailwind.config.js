@@ -2,6 +2,10 @@ module.exports = {
   content: ["./src/*.{html,js}", "./src/*.html"],
   darkMode: 'class',
   theme: {
+    fontFamily: {
+      'fira': ['Fira Code'],
+      'hack': ['Hack Nerd Font Mono']
+    },
     extend: {
       keyframes: {
         close: {
