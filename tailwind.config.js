@@ -4,9 +4,14 @@ module.exports = {
   theme: {
     fontFamily: {
       'fira': ['Fira Code'],
-      'hack': ['Hack Nerd Font Mono']
+      'mplus': ["'M PLUS Rounded 1c', 'Verdana', 'sans-serif'"]
     },
     extend: {
+      width: {
+        '256': '60rem',
+        '150': '50rem',
+        '128': '30rem'
+      },
       keyframes: {
         close: {
           from: {

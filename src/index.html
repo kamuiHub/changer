@@ -8,36 +8,44 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
 </head>
 
-<body class="bg-amber-50 dark:bg-zinc-900 font-fira">
-  <div class="sticky flex justify-between top-0 h-16  max-w-full backdrop-blur-sm bg-amber-50/60 dark:bg-zinc-900/60">
-    <div class="ml-5 m-auto flex">
-      <div class="w-5 h-5 mr-2 m-auto select-none md:w-6 md:h-6 hover:rotate-12">
-        <img src="./img/rice-w.png" class="rice-w display-none" draggable="false">
-        <img src="./img/rice-b.png" class="rice-b display-none" draggable="false">
-      </div class="m-auto">
-      <h1 class="text-slate-900 text-base font-bold md:text-xl dark:text-white">Kamui Master</h1>
+<body class="bg-amber-50 dark:bg-zinc-900 font-mplus">
+  <div class="w-full h-screen m-auto  md:w-150">
+    <div
+      class="sticky flex  justify-between top-0 h-16 w-full m-auto backdrop-blur-sm bg-amber-50/60 dark:bg-zinc-900/60">
+      <div class="ml-5 m-auto flex">
+        <div class="w-5 h-5 mr-2 m-auto select-none md:w-6 md:h-6 hover:rotate-12">
+          <img src="./img/rice-w.png" class="rice-w" draggable="false">
+          <img src="./img/rice-b.png" class="rice-b" draggable="false">
+        </div class="m-auto">
+        <h1 class="text-slate-900 text-base font-bold md:text-xl dark:text-white">Kamui Master</h1>
+      </div>
+      <div class="flex mr-16 m-auto w-10 h-10 select-none md:w-11 md:h-11">
+        <img src="./img/moon-white.png"
+          class="moon bg-purple-800 cursor-pointer border-2 border-purple-800 rounded-xl p-2.5 duration-500 hover:bg-purple-900 hover:border-purple-900"
+          draggable="false" alt="">
+        <img src="./img/sun-black.png"
+          class="sun bg-amber-200 cursor-pointer border-2 border-amber-200 rounded-xl p-2.5 duration-500 hover:bg-amber-400 hover:border-amber-400"
+          draggable="false" alt="">
+        <img src="./img/menu-w.png"
+          class="menu-w ml-3 border-2 border-zinc-800 rounded-xl p-2.5 duration-500 hover:bg-zinc-800" draggable="false"
+          alt="">
+        <img src="./img/menu-b.png"
+          class="menu-b  ml-3 border-2 border-slate-100 rounded-xl p-2.5 duration-500 hover:bg-slate-100"
+          draggable="false" alt="">
+      </div>
     </div>
-    <div class="flex mr-16 m-auto w-10 h-10 select-none md:w-11 md:h-11">
-      <img src="./img/moon-white.png"
-        class="moon display-none bg-purple-800 cursor-pointer border-2 border-purple-800 rounded-xl p-2.5 duration-500 hover:bg-purple-900 hover:border-purple-900"
-        draggable="false" alt="">
-      <img src="./img/sun-black.png"
-        class="sun display-none bg-amber-200 cursor-pointer border-2 border-amber-200 rounded-xl p-2.5 duration-500 hover:bg-amber-400 hover:border-amber-400"
-        draggable="false" alt="">
-      <img src="./img/menu-w.png" class="menu-w display-none ml-3 border-2 border-zinc-700 rounded-xl p-2.5 duration-500 hover:bg-zinc-700" draggable="false">
-      <img src="./img/menu-b.png" class="menu-b display-none ml-3 border-2 border-slate-100 rounded-xl p-2.5 duration-500 hover:bg-slate-100" draggable="false">
+    <div class="relative max-w-full p-10 text-slate-800 dark:text-slate-200">
+      <h1 class="text-4xl pb-4 font-bold text-center">CHANGER</h1>
+      <p class="text-2xl text-center">Choose <span class="text-blue-900 font-bold dark:text-purple-800">dark</span> or
+        <span class="text-sky-500 font-bold dark:text-amber-100">light</span> theme
+      </p>
     </div>
-  </div>
-  <div class="relative max-w-full p-10 text-slate-800 dark:text-slate-200">
-    <h1 class="text-4xl pb-4 font-bold text-center">CHANGER</h1>
-    <p class="text-2xl text-center">Choose <span class="text-blue-900 font-bold dark:text-purple-800">dark</span> or
-      <span class="text-sky-500 font-bold dark:text-amber-100">light</span> theme
-    </p>
-  </div>
-  <div class="max-w-full h-screen bg-white text-slate-500 dark:bg-zinc-800 text-slate-200">
-    <p id="demo" class="txArea m-20 text-xl text-center pt-10"></p>
+    <div class="max-w-full h-screen bg-white text-slate-500 dark:bg-zinc-800 text-slate-200">
+      <p id="demo" class="txArea m-20 text-xl text-center pt-10"></p>
+    </div>
   </div>
 
   <script src="./themes.js"></script>
