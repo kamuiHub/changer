@@ -2,12 +2,6 @@
 const sunIcon = document.querySelector(".sun");
 const moonIcon = document.querySelector(".moon");
 
-const riceWhite = document.querySelector(".rice-w");
-const riceBlack = document.querySelector(".rice-b");
-
-const menuWhite = document.querySelector(".menu-w");
-const menuBlack = document.querySelector(".menu-b");
-
 const wait = 200;
 
 //Theme Vars
@@ -18,10 +12,6 @@ const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
 const iconToggle = () => {
     moonIcon.classList.toggle("display-none");
     sunIcon.classList.toggle("display-none");
-    riceWhite.classList.toggle("display-none");
-    riceBlack.classList.toggle("display-none");
-    menuWhite.classList.toggle("display-none");
-    menuBlack.classList.toggle("display-none");
 };
 
 
@@ -30,13 +20,9 @@ const themeCheck = () => {
     if (userTheme === "dark" || (!userTheme && systemTheme)) {
         document.documentElement.classList.add("dark");
         moonIcon.classList.add("display-none");
-        riceBlack.classList.add("display-none");
-        menuBlack.classList.add("display-none");
         return;
     }
     sunIcon.classList.add("display-none");
-    riceWhite.classList.add("display-none");
-    menuWhite.classList.add("display-none");
 };
 
 
@@ -70,8 +56,7 @@ const themeSwitch = () => {
 
 // call theme switch on clicking buttons
 sunIcon.addEventListener("click", () => {
-    sunIcon.setAttribute("src", "./img/sun-white.png")
-
+    sunIcon.classList.replace('fill-black', 'fill-white');
     sunIcon.classList.add('animate-close');
     setTimeout(() => {
         themeSwitch();
@@ -81,15 +66,13 @@ sunIcon.addEventListener("click", () => {
             moonIcon.classList.remove('animate-init')
         },
             wait);
-        sunIcon.setAttribute("src", "./img/sun-black.png")
-
+        sunIcon.classList.replace('fill-white', 'fill-black');
     }, wait);
 });
 
 
 moonIcon.addEventListener("click", () => {
-    moonIcon.setAttribute("src", "./img/moon-black.png");
-
+    moonIcon.classList.replace('fill-white', 'fill-black');
     moonIcon.classList.add('animate-close');
     setTimeout(() => {
         themeSwitch();
@@ -99,8 +82,7 @@ moonIcon.addEventListener("click", () => {
             sunIcon.classList.remove('animate-init')
         },
             wait);
-        moonIcon.setAttribute("src", "./img/moon-white.png");
-
+        moonIcon.classList.replace('fill-black', 'fill-white');
     }, wait);
 });
 
