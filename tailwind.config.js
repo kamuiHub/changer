@@ -12,6 +12,9 @@ module.exports = {
         '150': '50rem',
         '128': '30rem'
       },
+      height: {
+        '150': '30rem'
+      },
       keyframes: {
         close: {
           from: {
