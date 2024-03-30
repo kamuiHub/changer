@@ -758,6 +758,10 @@ video {
   font-family: Hack Nerd Font Mono;
 }
 
+.font-fira {
+  font-family: Fira Code;
+}
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -910,11 +914,6 @@ video {
 }
 
 @media (min-width: 640px) {
-  .sm\:text-base {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-
   .sm\:text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
