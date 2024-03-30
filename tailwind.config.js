@@ -14,7 +14,7 @@ module.exports = {
       },
       height: {
         '240': '24rem',
-        '360': '36rem'
+        '360': '90rem'
       },
       keyframes: {
         close: {
