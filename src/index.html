@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/monokai.min.css">
 </head>
 
 <body class="bg-amber-50 dark:bg-zinc-900 font-mplus">
@@ -58,49 +58,46 @@
     </header>
 
 
-    <div class="w-full  p-10 text-slate-800 dark:text-slate-200">
+    <div class="w-full p-10 text-slate-800 dark:text-slate-200">
       <h1 class="text-4xl pb-4 font-bold text-center">CHANGER</h1>
       <p class="text-2xl text-center">Choose <span class="text-blue-900 font-bold dark:text-purple-800">dark</span> or
         <span class="text-sky-500 font-bold dark:text-amber-100">light</span> theme
       </p>
     </div>
 
-
-    <div class="max-w-full h-150 bg-white text-slate-500 dark:bg-zinc-800 text-slate-200">
-      <p id="demo" class="txArea m-20 text-xl text-center pt-10">
-        So I started to walk into the water. 
-        I won`t lie to you boys, I was terrified. 
-        But I pressed on, and as I made my way past the breakers a strange calm came over me. 
-        I don`t know if it was divine intervention or the kinship of all living things but 
+    <div class="max-w-full h-fill bg-white text-slate-500 dark:bg-zinc-800 text-slate-200">
+      <p id="demo" class="txArea m-20 text-xl text-center text-pretty pt-10 pb-10">
+        So I started to walk into the water.
+        I won`t lie to you boys, I was terrified.
+        But I pressed on, and as I made my way past the breakers a strange calm came over me.
+        I don`t know if it was divine intervention or the kinship of all living things but
         I tell you Jerry at that moment,I was a marine biologist.
       </p>
     </div>
 
-
-    <div>
-      <pre class="text-base">
-      <code class="language-rust">
+    <pre class="text-xs sm:text-base">
+      <code class="language-rust w-full h-fill p-20 m-auto">
 use std::env::current_dir;
 use std::fs::create_dir_all;
 
 fn main() {
-    let current_path = current_dir();
+  let current_path = current_dir();
 
-    let mut target_path = match current_path  {
-       Ok(path) => path,
-       Err(e) => panic!("{e:?}"),
-    };
-    print!("path: {target_path:?}");
-    target_path.push("new_dir.txt");
+  let mut target_path = match current_path  {
+    Ok(path) => path,
+    Err(e) => panic!("{e:?}"),
+  };
+  print!("path: {target_path:?}");
+  target_path.push("new_dir.txt");
 
-    match create_dir_all(&target_path) {
-       Ok(()) => print!("successfull creation"),
-       Err(e) => panic!("{e:?}")
-    };
+  match create_dir_all(&target_path) {
+    Ok(()) => print!("successfull creation"),
+    Err(e) => panic!("{e:?}")
+  };
 }
-    </code>
-</pre>
-    </div>
+        </code>
+      </pre>
+
   </div>
 
 

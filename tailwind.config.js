@@ -13,7 +13,8 @@ module.exports = {
         '128': '30rem'
       },
       height: {
-        '150': '30rem'
+        '240': '24rem',
+        '360': '36rem'
       },
       keyframes: {
         close: {
