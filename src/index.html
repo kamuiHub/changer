@@ -12,13 +12,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/monokai.min.css">
 </head>
 
-<body class="bg-amber-50 dark:bg-zinc-900 font-mplus">
+<body class="dark:bg-zinc-900 font-mplus">
   <div class="w-full h-screen m-auto  md:w-150">
 
 
     <header
-      class="sticky flex justify-between top-0 h-16 w-full m-auto backdrop-blur bg-amber-50/60 dark:bg-zinc-900/60">
-      <div class="ml-5 m-auto flex">
+      class="flex justify-between fixed top-0 z-50 h-16 w-full m-auto font-mplus backdrop-blur bg-amber-50/60 dark:bg-zinc-900/60">
+      <div class=" relative ml-5 m-auto flex">
 
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
           class="w-5 h-5 fill-current ml-2 mr-2 m-auto md:w-6 md:h-6 hover:rotate-12 dark:fill-white">
@@ -75,7 +75,7 @@
       </p>
     </div>
 
-    <pre class="text-xs sm:text-base h-fill">
+     <pre class="text-xs sm:text-base">
       <code class="language-rust w-full h-fill p-20 m-auto">
 use std::env::current_dir;
 use std::fs::create_dir_all;
@@ -97,6 +97,8 @@ fn main() {
 }
         </code>
       </pre>
+
+    </div>
   </div>
 
 
