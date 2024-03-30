@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/monokai.min.css">
+  <link id="syntax" rel="stylesheet">
 </head>
 
 <body class="bg-amber-50 dark:bg-zinc-900 font-mplus">
@@ -73,8 +73,8 @@
       </p>
     </div>
 
-     <pre class="text-xs sm:text-base">
-      <code class="language-rust w-full h-fill p-20 m-auto rounded-xl">
+     <pre class="text-xs font-nerd font-thin sm:text-sm">
+      <code class="language-rust w-11/12 h-fill p-20 m-auto font-nerd">
 use std::env::current_dir;
 use std::fs::create_dir_all;
 

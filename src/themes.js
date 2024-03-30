@@ -2,6 +2,9 @@
 const sunIcon = document.querySelector(".sun");
 const moonIcon = document.querySelector(".moon");
 
+
+const syntax = document.getElementById("syntax");
+
 const wait = 200;
 
 //Theme Vars
@@ -20,9 +23,11 @@ const themeCheck = () => {
     if (userTheme === "dark" || (!userTheme && systemTheme)) {
         document.documentElement.classList.add("dark");
         moonIcon.classList.add("display-none");
+        syntax.href = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark-reasonable.min.css";
         return;
     }
     sunIcon.classList.add("display-none");
+    syntax.href = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-light.min.css";
 };
 
 
@@ -46,11 +51,13 @@ const themeSwitch = () => {
         document.documentElement.classList.remove("dark");
         localStorage.setItem("theme", "light");
         iconToggle();
+        syntax.href = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-light.min.css";
         return;
     }
     document.documentElement.classList.add("dark");
     localStorage.setItem("theme", "dark");
     iconToggle();
+    syntax.href = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark-reasonable.min.css";
 };
 
 

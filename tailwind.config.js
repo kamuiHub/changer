@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     fontFamily: {
       'fira': ['Fira Code'],
-      'mplus': ["'M PLUS Rounded 1c', 'Verdana', 'sans-serif'"]
+      'mplus': ["'M PLUS Rounded 1c', 'Verdana', 'sans-serif'"],
+      'nerd': ['Hack Nerd Font Mono']
     },
     extend: {
       width: {
