@@ -11,11 +11,16 @@ module.exports = {
       width: {
         '256': '60rem',
         '150': '50rem',
+        '640': '40rem',
+        '300': '30rem',
+        '180': '18rem',
         '128': '30rem'
       },
       height: {
-        '240': '24rem',
-        '360': '90rem'
+        '300': '30rem',
+        '640': '40rem',
+        '360': '90rem',
+        '180': '18rem'
       },
       keyframes: {
         close: {
