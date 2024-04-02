@@ -1,6 +1,0 @@
-<img src="./img/menu-w.png"
-          class="menu-w ml-3 border-2 border-zinc-800 rounded-xl p-2.5 duration-500 hover:bg-zinc-800" draggable="false"
-          alt="">
-        <img src="./img/menu-b.png"
-          class="menu-b  ml-3 border-2 border-slate-100 rounded-xl p-2.5 duration-500 hover:bg-slate-100"
-          draggable="false" alt="">

@@ -20,11 +20,11 @@ const loader = new GLTFLoader();
 
 //Load the file
 loader.load(
-  `model/cat/scene.gltf`,
+  `model/dog/dog.glb`,
   function (gltf) {
     //If the file is loaded, add it to the scene
     object = gltf.scene;
-    object.scale.set(8, 8, 8);
+    object.scale.set(2.3, 2.3, 2.3);
     scene.add(object);
   }
 );
@@ -35,6 +35,7 @@ let container = document.getElementById("container3D");
 const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true }); //Alpha: true allows for the transparent background
 //renderer.setPixelRatio(window.devicePixelRatio)
 renderer.outputEncoding = THREE.sRGBEncoding
+renderer.setPixelRatio(window.devicePixelRatio)
 
 renderer.setSize(container.offsetWidth, container.offsetHeight);
 //Add the renderer to the DOM
@@ -65,13 +66,13 @@ camera.lookAt(target)
 //camera.position.z = 10;
 
 //Add lights to the scene, so we can actually see the 3D model
-const topLight = new THREE.DirectionalLight(0xffffff, 10); // (color, intensity)
-topLight.position.set(500, 500, 500) //top-left-ish
+const topLight = new THREE.DirectionalLight(0xffffff, 3); // (color, intensity)
+topLight.position.set(500, 500) //top-left-ish
 topLight.castShadow = true;
 scene.add(topLight);
 
-// const ambientLight = new THREE.AmbientLight(0xffffff, 10);
-// scene.add(ambientLight);
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+scene.add(ambientLight);
 
 //OrbitControls allow the camera to move around the scene
 //This adds controls to the camera, so we can rotate / zoom it with the mouse
