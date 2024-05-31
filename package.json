@@ -3,6 +3,7 @@
     "tailwindcss": "^3.4.1"
   },
   "dependencies": {
+    "@tailwindcss/language-server": "^0.0.16",
     "three": "^0.163.0"
   }
 }
