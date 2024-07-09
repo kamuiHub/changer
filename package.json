@@ -1,6 +1,6 @@
 {
   "devDependencies": {
-    "tailwindcss": "^3.4.1"
+    "tailwindcss": "^3.4.4"
   },
   "dependencies": {
     "@tailwindcss/language-server": "^0.0.16",
